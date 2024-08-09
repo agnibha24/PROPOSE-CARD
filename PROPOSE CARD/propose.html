@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+     initial-scale=1.0">
+    <title>Proposal Card "Designed by SM-Edtech"</title>
+    <style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #016597 0%, 
+    #8101a1 100%);
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+}
+.card {
+    background: rgb(200, 247, 255);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 90%;
+    max-width: 350px;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+.image-container{
+    margin: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 5px solid #b624ff;
+    border-radius: 20px;
+}
+img {
+    width: 100%;
+    border-radius: 10px;
+    height: auto; 
+    transition:0.5s ease;
+}
+img:hover {
+    transform: scale(1.4);
+    transform-origin: 100% 10%;
+    cursor: pointer;
+}
+.text-container h1 {
+    color: #5b00f9;
+    font-size: 20px;
+}
+.text-container p {
+    color: #333;
+    margin: 10px 0;
+    font-weight: bold;
+}
+.btn {
+    background-color: #5b00f9;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btn:hover {
+    background-color: #0674f2;
+}
+.hidden-text {
+    display: none;
+    color: #026bb0;
+    margin-top: 20px;
+    font-size: 16px;
+    animation: fadeIn 1s forwards;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+    </style>
+</head>
+<body>
+<div class="card">
+<div class="container">
+    <div class="image-container">
+        <img src="propose.jpg" alt="Girlfriend">
+    </div>
+    <div class="text-container">
+        <h1>I Love You</h1>
+        <p>You are the love of my life, and I want to 
+            spend every moment with you. Will you make me 
+            the happiest person by being my partner forever?</p>
+        <button class="btn" id="revealText">Click to Reveal</button>
+        <p class="hidden-text" id="hiddenText">I love you more than 
+            words can say!</p>
+        </div>
+   </div>
+</div>
+<script>
+    document.getElementById('revealText').addEventListener('click', function(){
+    document.getElementById('hiddenText').style.display = 'block';
+});
+</script>
+</body>
+</html>
